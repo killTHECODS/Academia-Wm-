@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN do Toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>tela de login</title>
+</head>
+<body>
+   <main id="container">
+    <form id="login_form">
+        <div id="form_header">
+            <h1>Login</h1>
+        </div>
+
+        <div id="inputs">
+            <div class="input-box">
+                <!-- Campo Login -->
+                <label for="Login">
+                    Login
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" id="Login" name="Login">
+                    </div>
+                </label>
+            </div>
+
+            <div class="input-box">
+                <!-- Campo Password -->
+                <label for="Password">
+                    Password
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="Password" name="Password">
+                    </div>
+                </label>
+
+                <div id="Forgot_password">
+                    <a href="#">
+                        Forgot your password?
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+            function logar() {
+                var Login = document.getElementById('Login').value;
+                var Password = document.getElementById('Password').value;
+
+                if (Login == "adm" && Password == "adm") {
+                    Toastify({
+                        text: "Login realizado com sucesso!",
+                        duration: 3000,
+                        close: true,
+                        gravity: "center", 
+                        position: "center", 
+                        stopOnFocus: true, 
+                        style: {
+                            background: "#008000",
+                        },
+                    }).showToast();
+
+                    
+                    setTimeout(function() {
+                        location.href = "home.html";
+                    }, 3100); 
+
+                } else {
+                    Toastify({
+                        text: "Usuário ou senha incorretos!",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top", 
+                        position: "center", 
+                        stopOnFocus: true,
+                        style: {
+                            background: "#FF0000",
+                        },
+                    }).showToast();
+                }
+            }
+        </script>
+        <input type="submit" onclick="logar(); return false">
+    </form>
+   </main> 
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css">
+    <title>login</title>
+</head>
+<body>
+    <header>
+        <div class="menu-content">
+            <h1 class="logo"> Academia Wm</h1>
+            <nav class="header-menu">
+                <ul class="list-itens">
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="home3.html">Planos</a></li>
+                    <li><a href="home2.html">Sobre nos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <h1 class="primary-text">Malhar Não Fica Mais Fácil, Você Que Fica Melhor!</h1>
+            <h2 class="second-text">SE INSCREVA AGORA E MUDE DE VIDA</h2>
+            <div class="btns">
+                <button class="btn-personal" id="botao-whatsapp">Contactar personal Trainer</button> 
+            </div>
+        </div>
+        <script>
+            document.getElementById('botao-whatsapp').addEventListener('click', function() {
+                // Número de WhatsApp (inclui o código do país sem o "+", por exemplo, 351 para Portugal)
+                var numeroWhatsApp = '+5581985529514';
+        
+                // Mensagem pronta que será enviada
+                var mensagem = 'Boa Tarde, Preciso da minha ficha de treino da semana!';
+        
+                // Cria o link com o número e a mensagem codificada
+                var url = 'https://api.whatsapp.com/send?phone=' + numeroWhatsApp + '&text=' + encodeURIComponent(mensagem);
+        
+                // Abre o link numa nova aba
+                window.open(url, '_blank');
+            });
+        </script>
+        
+    </main>
+</body>
+</html>

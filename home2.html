@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Academia WM</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">ACADEMIA WM</div>
+                <ul class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home3.html">Planos</a></li>
+                    <li><a href="home2.html" class="active">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section class="sobre-nos">
+        <div class="container">
+            <h1></h1>
+            <p>
+                Bem-vindo à Academia WM! Nossa academia foi fundada com o propósito de transformar vidas por meio de atividades físicas e bem-estar. Acreditamos que cada pessoa tem o potencial de alcançar seus objetivos de saúde e fitness com a orientação e o suporte adequados.
+            </p>
+            <p>
+                Com uma infraestrutura de ponta, equipamentos modernos e profissionais qualificados, criamos um ambiente seguro e motivador para todos os tipos de treinos. Seja você iniciante ou um atleta experiente, nossa equipe está pronta para te ajudar.
+            </p>
+            <p>
+                Estamos comprometidos em oferecer um atendimento personalizado, com planos que atendem às necessidades individuais. Venha nos visitar e descobrir como podemos ajudar a transformar seu estilo de vida!
+            </p>
+            <a href="home3.html" class="btn">Veja Nossos Planos</a>
+        </div>
+       
+<a href="home.html" onclick="scrollToSobreNos()"></a>
+
+<script>
+function scrollToSobreNos() {
+    const element = document.getElementById("sobre-nos");
+    element.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+    </section>
+
+</body>
+</html>

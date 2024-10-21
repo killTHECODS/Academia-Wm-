@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Academia</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">ACADEMIA WM</div>
+                <ul class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home3.html">Planos</a></li>
+                    <li><a href="home2.html" class="active">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="planos">
+            <div class="plano bronze">
+                <h2>Plano Bronze</h2>
+                <p>R$ 50,00/mês</p>
+                <p><strong>Descrição:</strong> Nosso plano mensal para você que não quer se comprometer, mas quer treinar em uma academia de alto padrão!</p>
+                <button onclick="abrirModal('bronze')">COMPRAR</button>
+            </div>
+            <div class="plano prata">
+                <h2>Plano Prata</h2>
+                <p>R$ 100,00/mês</p>
+                <p><strong>Descrição:</strong> Nosso plano mais econômico para você se exercitar quando e quanto quiser na academia que escolher!</p>
+                <button onclick="abrirModal('prata')">COMPRAR</button>
+            </div>
+            <div class="plano ouro">
+                <h2>Plano Ouro</h2>
+                <p>R$ 150,00/mês</p>
+                <p><strong>Descrição:</strong> Treine em qualquer academia Wm, com acompanhamento diário e por WhatsApp a qualquer momento!</p>
+                <button onclick="abrirModal('ouro')">COMPRAR</button>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modalPagamento" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                    <h2 >Pagamento</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="payment-options">
+                        <button onclick="mostrarFormularioCartao()">Cartão de Crédito</button>
+                        <button onclick="alert('Pagamento via Pix selecionado!')">Pix</button>
+                    </div>
+                    <div id="formCartao" class="payment-form" style="display:none;">
+                        <h3>Dados do Cartão</h3>
+                        <input type="text" placeholder="Nome no cartão" required>
+                        <input type="text" placeholder="Número do cartão" required>
+                        <input type="text" placeholder="Data de validade (MM/AA)" required>
+                        <input type="text" placeholder="CVV" required>
+                        <button>Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+         
+        function abrirModal(plano) {
+            document.getElementById('modalPagamento').style.display = 'block';
+        }
+
+        
+        function fecharModal() {
+            document.getElementById('modalPagamento').style.display = 'none';
+        }
+
+        
+        function mostrarFormularioCartao() {
+            document.getElementById('formCartao').style.display = 'block';
+        }
+
+         
+        window.onclick = function(event) {
+            var modal = document.getElementById('modalPagamento');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
